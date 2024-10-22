@@ -17,10 +17,7 @@
 		"strictBindCallApply": false,
 		"forceConsistentCasingInFileNames": false,
 		"noFallthroughCasesInSwitch": false,
-		"resolveJsonModule": true,
-		"typeRoots": ["./node_modules/@types", "./src/addons"],
-		"paths": {
-			"addon": ["./build/Release/addon"]
-		},
-	}
+		"resolveJsonModule": true
+	},
+	"include": ["src/**/*"]
 }
