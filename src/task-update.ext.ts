@@ -22,7 +22,7 @@ export class TaskUpdateExt
 		account: IAccountPayload,
 	): Promise<UpdateParams> {
 		await new Promise((resolve) => setTimeout(resolve, 1000));
-
+		console.log(params.fields.test = 'Lorem ipsum')
 		const { start_date, duration, end_date } = params.fields;
 		if (!start_date && !duration && !end_date) return params;
 
