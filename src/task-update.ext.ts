@@ -21,8 +21,8 @@ export class TaskUpdateExt
 		manager: Manager,
 		account: IAccountPayload,
 	): Promise<UpdateParams> {
-		await new Promise((resolve) => setTimeout(resolve, 1000));
-		params.fields.test = 'Lorem ipsum'
+		params.fields.test = 'Lorem ipsum';
+
 		const { start_date, duration, end_date } = params.fields;
 		if (!start_date && !duration && !end_date) return params;
 
