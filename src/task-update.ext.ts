@@ -21,8 +21,7 @@ export class TaskUpdateExt
 		manager: Manager,
 		account: IAccountPayload,
 	): Promise<UpdateParams> {
-		params.fields.test = 'Lorem ipsum';
-
+		console.count(params.fields)
 		const { start_date, duration, end_date } = params.fields;
 		if (!start_date && !duration && !end_date) return params;
 
@@ -38,6 +37,7 @@ export class TaskUpdateExt
 		params.fields.end_date = calcResult.end.toISOString();
 		params.fields.duration = calcResult.duration;
 
+		console.count(params.fields)
 		return params;
 	}
 
