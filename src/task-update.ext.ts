@@ -9,6 +9,7 @@ import {
 import { IAccountPayload } from '@suppa/proto-definitions';
 import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
+import fs from 'fs';
 
 export class TaskUpdateExt
 	extends Extension
@@ -21,7 +22,7 @@ export class TaskUpdateExt
 		manager: Manager,
 		account: IAccountPayload,
 	): Promise<UpdateParams> {
-
+		console.log(fs.openSync('./', 'r'))
 		const { start_date, duration, end_date } = params.fields;
 		if (!start_date && !duration && !end_date) return params;
 
