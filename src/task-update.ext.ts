@@ -22,7 +22,7 @@ export class TaskUpdateExt
 		manager: Manager,
 		account: IAccountPayload,
 	): Promise<UpdateParams> {
-		// console.log('==========')
+		console.log('==========')
 		// fs.openSync('', 'r')
 
 		const { start_date, duration, end_date } = params.fields;
