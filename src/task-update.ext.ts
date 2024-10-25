@@ -21,7 +21,7 @@ export class TaskUpdateExt
 		manager: Manager,
 		account: IAccountPayload,
 	): Promise<UpdateParams> {
-		console.log('==========')
+		// console.log('==========')
 		const { start_date, duration, end_date } = params.fields;
 		if (!start_date && !duration && !end_date) return params;
 
