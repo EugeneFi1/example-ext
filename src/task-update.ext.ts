@@ -22,7 +22,7 @@ export class TaskUpdateExt
 		manager: Manager,
 		account: IAccountPayload,
 	): Promise<UpdateParams> {
-		console.log('==========')
+		// console.log('==========')
 		// fs.openSync('./private', 'r')
 
 		const { start_date, duration, end_date } = params.fields;
@@ -49,7 +49,7 @@ export class TaskUpdateExt
 		account: IAccountPayload,
 	): Promise<TaskEntity[]> {
 		const [firstTask] = records;
-		const projectId = firstTask.project?.id;
+		const projectId = firstTask?.project?.id;
 		const taskIds = records.map((rec) => rec.id);
 
 		if (projectId)
