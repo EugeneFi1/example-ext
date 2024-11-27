@@ -1,9 +1,9 @@
 import {
 	ComparatorEnum,
 	Extension,
-	Manager,
+	Manager, OnEntitySelect,
 	OnEntityUpdate,
-	OperatorEnum,
+	OperatorEnum, SelectParams,
 	UpdateParams,
 } from '@suppa/sdk';
 import { IAccountPayload } from '@suppa/proto-definitions';
@@ -11,7 +11,7 @@ import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
 import fs from "fs";
 
-export class TaskUpdateExt
+export class TaskUpdate
 	extends Extension
 	implements OnEntityUpdate<TaskEntity>
 {

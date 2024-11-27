@@ -1,3 +1,3 @@
-import { TaskUpdateExt } from './task-update.ext';
+import { TaskUpdate } from './task-update';
 
-export default [TaskUpdateExt];
+export default [TaskUpdate];
