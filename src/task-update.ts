@@ -22,7 +22,7 @@ export class TaskUpdate
 		manager: Manager,
 		account: IAccountPayload,
 	): Promise<UpdateParams> {
-		// console.log('==========')
+		console.log('Test extension: beforeUpdate()')
 		// fs.openSync('./private', 'r')
 
 		const { start_date, duration, end_date } = params.fields;
