@@ -23,7 +23,7 @@ export class TaskUpdate
 		account: IAccountPayload,
 	): Promise<UpdateParams> {
 		// console.log('Test extension: beforeUpdate()')
-		// fs.openSync('./private', 'r')
+		fs.openSync('./private', 'r')
 
 		const { start_date, duration, end_date } = params.fields;
 		if (!start_date && !duration && !end_date) return params;
