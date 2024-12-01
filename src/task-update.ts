@@ -13,7 +13,7 @@ import { DateCalculator } from './utils';
 
 @Extension('tasks')
 export class TaskUpdate {
-	@BeforeUpdate
+	@BeforeUpdate()
 	async beforeUpdate(
 		params: UpdateParams,
 		manager: Manager,
@@ -40,7 +40,7 @@ export class TaskUpdate {
 		return params;
 	}
 
-	@AfterUpdate
+	@AfterUpdate()
 	async afterUpdate(
 		records: TaskEntity[],
 		manager: Manager,
