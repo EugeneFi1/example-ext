@@ -1,3 +1,5 @@
 import { TaskUpdate } from './task-update';
 
-export {};
+export {
+    TaskUpdate
+};
