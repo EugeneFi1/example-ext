@@ -5,7 +5,8 @@ import {
 	OperatorEnum,
 	UpdateParams,
 	AfterUpdate,
-	BeforeUpdate
+	BeforeUpdate,
+	Account
 } from '@suppa/sdk';
 import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
@@ -17,7 +18,7 @@ export class TaskUpdate {
 	async beforeUpdate(
 		params: UpdateParams,
 		manager: Manager,
-		account: any,
+		account: Account,
 	): Promise<UpdateParams> {
 		// console.log('Test extension: beforeUpdate()')
 		// fs.openSync('./private', 'r')
@@ -44,7 +45,7 @@ export class TaskUpdate {
 	async afterUpdate(
 		records: TaskEntity[],
 		manager: Manager,
-		account: any,
+		account: Account,
 	): Promise<TaskEntity[]> {
 		const [firstTask] = records;
 		const projectId = firstTask?.project?.id;
