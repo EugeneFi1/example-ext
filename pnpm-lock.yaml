@@ -8,12 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@suppa/proto-definitions':
-        specifier: ^1.6.0
-        version: 1.6.0
       '@suppa/sdk':
-        specifier: ^1.4.0
-        version: 1.4.0
+        specifier: file:../sdk
+        version: file:../sdk
       esbuild:
         specifier: ^0.24.0
         version: 0.24.0
@@ -32,7 +29,7 @@ importers:
         version: 1.1.4
       typescript:
         specifier: '>=3.0.0'
-        version: 5.6.3
+        version: 5.7.2
 
 packages:
 
@@ -226,15 +223,15 @@ packages:
     resolution: {integrity: sha1-tkHuBObL1PyTbk7aegQqcyAmBPs=, tarball: https://git.modern-expo.com/api/v4/projects/106/packages/npm/@suppa/proto-definitions/-/@suppa/proto-definitions-1.6.0.tgz}
     engines: {node: '>=20', pnpm: '>=9'}
 
-  '@suppa/sdk@1.4.0':
-    resolution: {integrity: sha1-VPb3V4MSQrmz2c9YaTp0M6qbD+I=, tarball: https://git.modern-expo.com/api/v4/projects/114/packages/npm/@suppa/sdk/-/@suppa/sdk-1.4.0.tgz}
+  '@suppa/sdk@file:../sdk':
+    resolution: {directory: ../sdk, type: directory}
     engines: {node: '>=20', pnpm: '>=9'}
 
   '@types/moment-business-time@1.1.4':
     resolution: {integrity: sha512-exQvOlSg48TkJ+2krKBqEmXSZbqItgTgtlInlYqkYkKO5a1f73h5z4EkC1tKFxiqCcABqYCpkOHlx5q4J8v8lw==}
 
-  '@types/node@22.7.9':
-    resolution: {integrity: sha512-jrTfRC7FM6nChvU7X2KqcrgquofrWLFDeYC1hKfwNWomVvrn7JIksqf344WN2X/y8xrgqBd2dJATZV4GbatBfg==}
+  '@types/node@22.10.1':
+    resolution: {integrity: sha512-qKgsUwfHZV2WCWLAnVP1JqnpE6Im6h3Y0+fYgMTasNQ7V++CBX5OT1as0g0f+OyubbFqhf6XVNIsmN4IIhEgGQ==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -251,8 +248,8 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
-  axios@1.7.7:
-    resolution: {integrity: sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==}
+  axios@1.7.8:
+    resolution: {integrity: sha512-Uu0wb7KNqK2t5K+YQyVCLM76prD5sRFjKHbJYCP1J7JFGEQ6nN7HWn9+04LAeiJ3ji54lgS/gZCH1oxyrf1SPw==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -428,6 +425,9 @@ packages:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
 
+  reflect-metadata@0.2.2:
+    resolution: {integrity: sha512-urBwgfrvVP/eAyXx4hluJivBKzuEbSQs9rKWCrCkbSxNv8mxPcUZKeuoF3Uy4mJl3Lwprp6yy5/39VWigZ4K6Q==}
+
   require-directory@2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
     engines: {node: '>=0.10.0'}
@@ -464,19 +464,19 @@ packages:
     resolution: {integrity: sha512-r0eojU4bI8MnHr8c5bNo7lJDdI2qXlWWJk6a9EAFG7vbhTjElYhBVS3/miuE0uOuoLdb8Mc/rVfsmm6eo5o9GA==}
     hasBin: true
 
-  tslib@2.8.0:
-    resolution: {integrity: sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==}
+  tslib@2.8.1:
+    resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+  typescript@5.7.2:
+    resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
   undefsafe@2.0.5:
     resolution: {integrity: sha512-WxONCrssBM8TSPRqN5EmsjVrsv4A8X12J4ArBiiayv3DyyG3ZlIg6yysuuSYdZsVz3TKcTg2fd//Ujd4CHV1iA==}
 
-  undici-types@6.19.8:
-    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+  undici-types@6.20.0:
+    resolution: {integrity: sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==}
 
   wrap-ansi@7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}
@@ -611,14 +611,15 @@ snapshots:
       '@grpc/proto-loader': 0.7.13
       google-protobuf: 3.21.4
       rxjs: 7.8.1
-      typescript: 5.6.3
+      typescript: 5.7.2
 
-  '@suppa/sdk@1.4.0':
+  '@suppa/sdk@file:../sdk':
     dependencies:
       '@grpc/grpc-js': 1.12.2
       '@suppa/proto-definitions': 1.6.0
-      axios: 1.7.7
-      typescript: 5.6.3
+      axios: 1.7.8
+      reflect-metadata: 0.2.2
+      typescript: 5.7.2
     transitivePeerDependencies:
       - debug
 
@@ -626,9 +627,9 @@ snapshots:
     dependencies:
       moment: 2.30.1
 
-  '@types/node@22.7.9':
+  '@types/node@22.10.1':
     dependencies:
-      undici-types: 6.19.8
+      undici-types: 6.20.0
 
   ansi-regex@5.0.1: {}
 
@@ -643,7 +644,7 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios@1.7.7:
+  axios@1.7.8:
     dependencies:
       follow-redirects: 1.15.9
       form-data: 4.0.1
@@ -826,7 +827,7 @@ snapshots:
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
       '@protobufjs/utf8': 1.1.0
-      '@types/node': 22.7.9
+      '@types/node': 22.10.1
       long: 5.2.3
 
   proxy-from-env@1.1.0: {}
@@ -837,11 +838,13 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
+  reflect-metadata@0.2.2: {}
+
   require-directory@2.1.1: {}
 
   rxjs@7.8.1:
     dependencies:
-      tslib: 2.8.0
+      tslib: 2.8.1
 
   semver@7.6.3: {}
 
@@ -869,13 +872,13 @@ snapshots:
 
   touch@3.1.1: {}
 
-  tslib@2.8.0: {}
+  tslib@2.8.1: {}
 
-  typescript@5.6.3: {}
+  typescript@5.7.2: {}
 
   undefsafe@2.0.5: {}
 
-  undici-types@6.19.8: {}
+  undici-types@6.20.0: {}
 
   wrap-ansi@7.0.0:
     dependencies:

@@ -1,26 +1,23 @@
 import {
 	ComparatorEnum,
 	Extension,
-	Manager, OnEntitySelect,
-	OnEntityUpdate,
-	OperatorEnum, SelectParams,
+	Manager,
+	OperatorEnum,
 	UpdateParams,
+	AfterUpdate,
+	BeforeUpdate
 } from '@suppa/sdk';
-import { IAccountPayload } from '@suppa/proto-definitions';
 import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
 // import fs from "fs";
 
-export class TaskUpdate
-	extends Extension
-	implements OnEntityUpdate<TaskEntity>
-{
-	table = 'tasks';
-
+@Extension('tasks')
+export class TaskUpdate {
+	@BeforeUpdate
 	async beforeUpdate(
 		params: UpdateParams,
 		manager: Manager,
-		account: IAccountPayload,
+		account: any,
 	): Promise<UpdateParams> {
 		// console.log('Test extension: beforeUpdate()')
 		// fs.openSync('./private', 'r')
@@ -43,10 +40,11 @@ export class TaskUpdate
 		return params;
 	}
 
+	@AfterUpdate
 	async afterUpdate(
 		records: TaskEntity[],
 		manager: Manager,
-		account: IAccountPayload,
+		account: any,
 	): Promise<TaskEntity[]> {
 		const [firstTask] = records;
 		const projectId = firstTask?.project?.id;
