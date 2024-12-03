@@ -6,11 +6,8 @@ import {
 @Job("test-job")
 export class TestJob {
 
-    constructor() {
-    }
-
     @SubscribeJob()
-    async run(): Promise<void> {
+    run(): void {
         console.log("------------TEST JOB-------")
     }
 }
