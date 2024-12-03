@@ -7,9 +7,9 @@ import {
 export class TestJob {
 
     @SubscribeJob()
-    async run(): Promise<void> {
+    public run(): string {
         console.log("------------TEST JOB-------")
 
-        return Promise.resolve();
+        return "JOB WORKS";
     }
 }
