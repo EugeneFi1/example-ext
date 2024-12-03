@@ -1,5 +1,6 @@
-import { TaskUpdate } from './task-update';
+import {ExampleJob, TaskUpdate } from './task-update';
 
 export {
-    TaskUpdate
+    TaskUpdate,
+    ExampleJob
 };

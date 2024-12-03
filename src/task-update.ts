@@ -6,7 +6,7 @@ import {
 	UpdateParams,
 	AfterUpdate,
 	BeforeUpdate,
-	Account
+	Account, Job, SubscribeJob
 } from '@suppa/sdk';
 import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
@@ -93,5 +93,13 @@ export class TaskUpdate {
 			});
 
 		return records;
+	}
+}
+
+@Job('example-job')
+export class ExampleJob {
+	@SubscribeJob()
+	async subscribeMethod(): Promise<void> {
+
 	}
 }
