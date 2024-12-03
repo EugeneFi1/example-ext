@@ -9,5 +9,7 @@ export class TestJob {
     @SubscribeJob()
     async run(): Promise<void> {
         console.log("------------TEST JOB-------")
+
+        return Promise.resolve();
     }
 }
