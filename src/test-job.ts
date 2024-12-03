@@ -7,7 +7,7 @@ import {
 export class TestJob {
 
     @SubscribeJob()
-    run(): void {
+    async run(): Promise<void> {
         console.log("------------TEST JOB-------")
     }
 }
