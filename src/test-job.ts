@@ -10,7 +10,7 @@ export class TestJob {
 
     @SubscribeJob()
     public async run(manager: Manager): Promise<void> {
-        console.log("------------TEST JOB-------")
+        console.log("------------TEST JOB-------", manager)
         const result = await manager.sudo.findOne<TaskEntity>("tasks", {
             where: {
                 operator: OperatorEnum.And,
