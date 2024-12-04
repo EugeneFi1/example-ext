@@ -11,21 +11,11 @@ export class TestJob {
     @SubscribeJob()
     public async run(manager: Manager): Promise<void> {
         console.log("------------TEST JOB-------", manager)
-        const result = await manager.sudo.findOne<TaskEntity>("tasks", {
-            where: {
-                operator: OperatorEnum.And,
-                filters: [
-
-                    {
-                        field: 'id',
-                        comparator: ComparatorEnum.In,
-                        value: 1,
-                    },
-                ],
-            }
+        const result = await manager.sudo.findOneById<TaskEntity>("tasks", 1, {
+            id: true,
         })
 
-        //console.log("RESULT: ", result)
+        console.log("RESULT: ", result)
 
         return;
     }
