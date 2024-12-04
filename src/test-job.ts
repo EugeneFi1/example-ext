@@ -25,7 +25,7 @@ export class TestJob {
             }
         })
 
-        console.log("RESULT: ", result)
+        //console.log("RESULT: ", result)
 
         return;
     }
