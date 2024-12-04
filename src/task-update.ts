@@ -12,7 +12,6 @@ import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
 // import fs from "fs";
 
-@Job("")
 @Extension('tasks')
 export class TaskUpdate {
 	@BeforeUpdate()
@@ -94,12 +93,5 @@ export class TaskUpdate {
 			});
 
 		return records;
-	}
-
-	@SubscribeJob()
-	async run(): Promise<void> {
-		console.log("------------TEST JOB-------")
-
-		return Promise.resolve();
 	}
 }
