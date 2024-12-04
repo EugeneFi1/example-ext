@@ -27,6 +27,6 @@ export class TestJob {
 
         console.log("RESULT: ", result)
 
-        //return "JOB WORKS";
+        return;
     }
 }
