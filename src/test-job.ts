@@ -10,7 +10,7 @@ export class TestJob {
 
     @SubscribeJob()
     public async run(manager: Manager): Promise<void> {
-        console.log("------------TEST JOB-------", manager)
+        console.log("------------TEST JOB-------")
         const result = await manager.sudo.findOneById<TaskEntity>("tasks", 1, {
             id: true,
             title: true
