@@ -13,6 +13,7 @@ export class TestJob {
         console.log("------------TEST JOB-------", manager)
         const result = await manager.sudo.findOneById<TaskEntity>("tasks", 1, {
             id: true,
+            title: true
         })
 
         console.log("RESULT: ", result)
