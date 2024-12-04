@@ -9,7 +9,7 @@ import {TaskEntity} from "./entities";
 export class TestJob {
 
     @SubscribeJob()
-    public async run(manager: Manager): Promise<string> {
+    public async run(manager: Manager): Promise<void> {
         console.log("------------TEST JOB-------")
         const result = await manager.sudo.findOne<TaskEntity>("tasks", {
             where: {
@@ -27,6 +27,6 @@ export class TestJob {
 
         console.log("RESULT: ", result)
 
-        return "JOB WORKS";
+        //return "JOB WORKS";
     }
 }
