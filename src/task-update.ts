@@ -6,7 +6,7 @@ import {
 	UpdateParams,
 	AfterUpdate,
 	BeforeUpdate,
-	Account, Job, SubscribeJob
+	Account, Job, SubscribeJob, Post, Controller
 } from '@suppa/sdk';
 import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
@@ -96,10 +96,10 @@ export class TaskUpdate {
 	}
 }
 
-@Job('example-job')
-export class ExampleJob {
-	@SubscribeJob()
-	async subscribeMethod(): Promise<void> {
-
+@Controller('test')
+export class ExampleController {
+	@Post('ent-point')
+	testControllerMethod(body: any) {
+		return body;
 	}
 }

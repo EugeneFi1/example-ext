@@ -8,9 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@suppa/proto-definitions':
+        specifier: ^1.13.2
+        version: 1.13.2
       '@suppa/sdk':
-        specifier: ^1.7.3
-        version: 1.7.3
+        specifier: ^1.8.1
+        version: 1.8.1
       esbuild:
         specifier: ^0.24.0
         version: 0.24.0
@@ -177,8 +180,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@grpc/grpc-js@1.12.2':
-    resolution: {integrity: sha512-bgxdZmgTrJZX50OjyVwz3+mNEnCTNkh3cIqGPWVNeW9jX6bn1ZkU80uPd+67/ZpIJIjRQ9qaHCjhavyoWYxumg==}
+  '@grpc/grpc-js@1.12.3':
+    resolution: {integrity: sha512-iaxAZnANdCwMNpJlyhkI1W1jQZIDZKFNtU2OpQDdgd+pBcU3t7G+PT7svobkW4WSZTdis+CVV6y8KIwu83HDYQ==}
     engines: {node: '>=12.10.0'}
 
   '@grpc/proto-loader@0.7.13':
@@ -219,12 +222,16 @@ packages:
   '@protobufjs/utf8@1.1.0':
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
 
+  '@suppa/proto-definitions@1.13.2':
+    resolution: {integrity: sha1-2sSpYQOZkLtdYMYtk8LwWvgB3eg=, tarball: https://git.modern-expo.com/api/v4/projects/106/packages/npm/@suppa/proto-definitions/-/@suppa/proto-definitions-1.13.2.tgz}
+    engines: {node: '>=18', pnpm: '>=9'}
+
   '@suppa/proto-definitions@1.6.0':
     resolution: {integrity: sha1-tkHuBObL1PyTbk7aegQqcyAmBPs=, tarball: https://git.modern-expo.com/api/v4/projects/106/packages/npm/@suppa/proto-definitions/-/@suppa/proto-definitions-1.6.0.tgz}
     engines: {node: '>=20', pnpm: '>=9'}
 
-  '@suppa/sdk@1.7.3':
-    resolution: {integrity: sha1-xLoNmL6M8Yd5NPkEcHXEY9XL6BY=, tarball: https://git.modern-expo.com/api/v4/projects/114/packages/npm/@suppa/sdk/-/@suppa/sdk-1.7.3.tgz}
+  '@suppa/sdk@1.8.1':
+    resolution: {integrity: sha1-B0/mx++cqDYR0J0fOYrAInB1wNc=, tarball: https://git.modern-expo.com/api/v4/projects/114/packages/npm/@suppa/sdk/-/@suppa/sdk-1.8.1.tgz}
     engines: {node: '>=20', pnpm: '>=9'}
 
   '@types/moment-business-time@1.1.4':
@@ -248,8 +255,8 @@ packages:
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
 
-  axios@1.7.8:
-    resolution: {integrity: sha512-Uu0wb7KNqK2t5K+YQyVCLM76prD5sRFjKHbJYCP1J7JFGEQ6nN7HWn9+04LAeiJ3ji54lgS/gZCH1oxyrf1SPw==}
+  axios@1.7.9:
+    resolution: {integrity: sha512-LhLcE7Hbiryz8oMDdDptSrWowmB4Bl6RCt6sIJKpRB4XtVf0iEgewX3au/pJqm+Py1kCASkb/FFKjxQaLtxJvw==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -568,7 +575,7 @@ snapshots:
   '@esbuild/win32-x64@0.24.0':
     optional: true
 
-  '@grpc/grpc-js@1.12.2':
+  '@grpc/grpc-js@1.12.3':
     dependencies:
       '@grpc/proto-loader': 0.7.13
       '@js-sdsl/ordered-map': 4.4.2
@@ -605,19 +612,27 @@ snapshots:
 
   '@protobufjs/utf8@1.1.0': {}
 
-  '@suppa/proto-definitions@1.6.0':
+  '@suppa/proto-definitions@1.13.2':
     dependencies:
-      '@grpc/grpc-js': 1.12.2
+      '@grpc/grpc-js': 1.12.3
       '@grpc/proto-loader': 0.7.13
       google-protobuf: 3.21.4
       rxjs: 7.8.1
       typescript: 5.7.2
 
-  '@suppa/sdk@1.7.3':
+  '@suppa/proto-definitions@1.6.0':
     dependencies:
-      '@grpc/grpc-js': 1.12.2
+      '@grpc/grpc-js': 1.12.3
+      '@grpc/proto-loader': 0.7.13
+      google-protobuf: 3.21.4
+      rxjs: 7.8.1
+      typescript: 5.7.2
+
+  '@suppa/sdk@1.8.1':
+    dependencies:
+      '@grpc/grpc-js': 1.12.3
       '@suppa/proto-definitions': 1.6.0
-      axios: 1.7.8
+      axios: 1.7.9
       reflect-metadata: 0.2.2
       typescript: 5.7.2
     transitivePeerDependencies:
@@ -644,7 +659,7 @@ snapshots:
 
   asynckit@0.4.0: {}
 
-  axios@1.7.8:
+  axios@1.7.9:
     dependencies:
       follow-redirects: 1.15.9
       form-data: 4.0.1
