@@ -30,6 +30,9 @@ importers:
       '@types/moment-business-time':
         specifier: ^1.1.4
         version: 1.1.4
+      prettier:
+        specifier: ^3.4.2
+        version: 3.4.2
       typescript:
         specifier: '>=3.0.0'
         version: 5.7.2
@@ -417,6 +420,11 @@ packages:
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
+
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   protobufjs@7.4.0:
     resolution: {integrity: sha512-mRUWCc3KUU4w1jU8sGxICXH/gNS94DvI1gxqDvBzhj1JpcsimQkYiOJfwsPUykUI5ZaspFbSgmBLER8IrQ3tqw==}
@@ -829,6 +837,8 @@ snapshots:
   normalize-path@3.0.0: {}
 
   picomatch@2.3.1: {}
+
+  prettier@3.4.2: {}
 
   protobufjs@7.4.0:
     dependencies:

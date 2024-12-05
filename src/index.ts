@@ -1,6 +1,4 @@
-import {ExampleController, TaskUpdate } from './task-update';
+import { ExampleController } from './example.controller';
+import { TaskExtension } from './task.extension';
 
-export {
-    TaskUpdate,
-    ExampleController,
-};
+export { TaskExtension, ExampleController };

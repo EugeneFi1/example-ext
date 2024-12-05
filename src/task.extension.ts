@@ -6,23 +6,19 @@ import {
 	UpdateParams,
 	AfterUpdate,
 	BeforeUpdate,
-	Account, Job, SubscribeJob, Post, Controller
+	Account,
 } from '@suppa/sdk';
 import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
-// import fs from "fs";
 
 @Extension('tasks')
-export class TaskUpdate {
+export class TaskExtension {
 	@BeforeUpdate()
 	async beforeUpdate(
 		params: UpdateParams,
 		manager: Manager,
 		account: Account,
 	): Promise<UpdateParams> {
-		// console.log('Test extension: beforeUpdate()')
-		// fs.openSync('./private', 'r')
-
 		const { start_date, duration, end_date } = params.fields;
 		if (!start_date && !duration && !end_date) return params;
 
@@ -93,13 +89,5 @@ export class TaskUpdate {
 			});
 
 		return records;
-	}
-}
-
-@Controller('test')
-export class ExampleController {
-	@Post('ent-point')
-	testControllerMethod(body: any) {
-		return body;
 	}
 }
