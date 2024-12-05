@@ -1,9 +1,11 @@
-import { Controller, Post } from '@suppa/sdk';
+import { Controller, Manager, Post } from '@suppa/sdk';
 
 @Controller('test')
 export class ExampleController {
 	@Post('ent-point')
-	testControllerMethod(body: any) {
-		return body;
+	testControllerMethod(request: any, manager: Manager) {
+		console.log(request);
+
+		return request;
 	}
 }
