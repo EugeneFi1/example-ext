@@ -14,7 +14,9 @@ import { ExampleJob } from '../jobs';
 
 @Extension('tasks')
 export class ExampleExtension {
-	constructor(private readonly exampleJob: ExampleJob) {}
+	constructor(private readonly exampleJob: ExampleJob) {
+		console.log({ exampleJob });
+	}
 
 	@BeforeUpdate()
 	async beforeUpdate(
