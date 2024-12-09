@@ -10,15 +10,20 @@ import {
 } from '@suppa/sdk';
 import { TaskEntity } from '../entities';
 import { DateCalculator } from '../utils';
+import { ExampleJob } from '../jobs';
 
-// @Extension('tasks')
+@Extension('tasks')
 export class ExampleExtension {
+	constructor(private readonly exampleJob: ExampleJob) {}
+
 	@BeforeUpdate()
 	async beforeUpdate(
 		params: UpdateParams,
 		manager: Manager,
 		account: Account,
 	): Promise<UpdateParams> {
+		console.log(this.exampleJob.testJobMethod(manager));
+
 		const { start_date, duration, end_date } = params.fields;
 		if (!start_date && !duration && !end_date) return params;
 
