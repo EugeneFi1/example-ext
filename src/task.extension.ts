@@ -10,7 +10,9 @@ import {
 } from '@suppa/sdk';
 import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 @Extension('tasks')
 export class TaskExtension {
 	@BeforeUpdate()

@@ -1,4 +1,5 @@
-import { Controller, Manager, Post } from '@suppa/sdk';
+import { Controller, Post } from '@nestjs/common';
+import { Manager } from '@suppa/sdk';
 
 @Controller('test')
 export class ExampleController {
