@@ -11,7 +11,6 @@ import {
 import { TaskEntity } from './entities';
 import { DateCalculator } from './utils';
 import { Injectable } from '@nestjs/common';
-import fs from 'fs';
 
 @Injectable()
 @Extension('tasks')
@@ -22,9 +21,6 @@ export class TaskExtension {
 		manager: Manager,
 		account: Account,
 	): Promise<UpdateParams> {
-		console.log(process?.env);
-		console.log(fs);
-
 		const { start_date, duration, end_date } = params.fields;
 		if (!start_date && !duration && !end_date) return params;
 
