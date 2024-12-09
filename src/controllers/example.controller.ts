@@ -1,7 +1,7 @@
 import { Controller, Post } from '@nestjs/common';
 import { Manager } from '@suppa/sdk';
 
-@Controller('test')
+@Controller('example-controller')
 export class ExampleController {
 	@Post('ent-point')
 	testControllerMethod(request: any, manager: Manager) {

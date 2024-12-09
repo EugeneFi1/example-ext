@@ -8,13 +8,11 @@ import {
 	BeforeUpdate,
 	Account,
 } from '@suppa/sdk';
-import { TaskEntity } from './entities';
-import { DateCalculator } from './utils';
-import { Injectable } from '@nestjs/common';
+import { TaskEntity } from '../entities';
+import { DateCalculator } from '../utils';
 
-@Injectable()
 @Extension('tasks')
-export class TaskExtension {
+export class ExampleExtension {
 	@BeforeUpdate()
 	async beforeUpdate(
 		params: UpdateParams,

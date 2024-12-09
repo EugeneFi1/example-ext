@@ -1,20 +1,14 @@
-import { ExampleController } from './example.controller';
-import { TaskExtension } from './task.extension';
-import { ExampleJob } from './example.job';
-import { Module } from '@nestjs/common';
+import { ExampleController } from './controllers';
+import { ExampleExtension } from './extensions';
+import { ExampleJob } from './jobs';
 import { DiscoveryModule } from '@nestjs/core';
+import { Module } from '@nestjs/common';
 
-export { TaskExtension, ExampleController, ExampleJob };
-
-@Module({
-	providers: [ExampleJob],
-})
-class DiffModule {}
+export { ExampleExtension, ExampleController, ExampleJob };
 
 @Module({
-	imports: [DiscoveryModule, DiffModule],
+	imports: [DiscoveryModule],
 	controllers: [ExampleController],
-	providers: [TaskExtension],
-	exports: [],
+	providers: [ExampleExtension, ExampleJob],
 })
 export class AppModule {}
