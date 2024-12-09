@@ -11,7 +11,7 @@ import {
 import { TaskEntity } from '../entities';
 import { DateCalculator } from '../utils';
 
-@Extension('tasks')
+// @Extension('tasks')
 export class ExampleExtension {
 	@BeforeUpdate()
 	async beforeUpdate(
