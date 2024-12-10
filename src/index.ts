@@ -7,7 +7,12 @@ import { Module } from '@nestjs/common';
 export { ExampleExtension, ExampleController, ExampleJob };
 
 @Module({
-	imports: [DiscoveryModule],
+	providers: [],
+})
+export class RelationModule {}
+
+@Module({
+	imports: [DiscoveryModule, RelationModule],
 	controllers: [ExampleController],
 	providers: [ExampleExtension, ExampleJob],
 })
