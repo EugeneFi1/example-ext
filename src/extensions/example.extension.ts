@@ -12,14 +12,22 @@ import { TaskEntity } from '../entities';
 import { DateCalculator } from '../utils';
 import { ExampleJob } from '../jobs';
 import { DiscoveryService } from '@nestjs/core';
+import { OnModuleInit } from '@nestjs/common';
 
 @Extension('tasks')
-export class ExampleExtension {
+export class ExampleExtension implements OnModuleInit {
 	constructor(
-		private readonly exampleJob: ExampleJob,
-		private readonly discoveryService: DiscoveryService,
+		readonly exampleJob: ExampleJob,
+		readonly discoveryService: DiscoveryService,
 	) {
 		console.log({ exampleJob, discoveryService });
+	}
+
+	onModuleInit() {
+		console.log('- onModuleInit: ', {
+			exampleJob: this.exampleJob,
+			discoveryService: this.discoveryService,
+		});
 	}
 
 	@BeforeUpdate()
