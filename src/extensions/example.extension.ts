@@ -20,7 +20,7 @@ export class ExampleExtension implements OnModuleInit {
 		readonly exampleJob: ExampleJob,
 		readonly discoveryService: DiscoveryService,
 	) {
-		console.log({ exampleJob, discoveryService });
+		console.log('ExampleExtension:', { exampleJob, discoveryService });
 	}
 
 	onModuleInit() {
