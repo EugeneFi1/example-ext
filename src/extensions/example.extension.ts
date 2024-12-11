@@ -12,8 +12,10 @@ import { TaskEntity } from '../entities';
 import { DateCalculator } from '../utils';
 import { ExampleJob } from '../jobs';
 import { DiscoveryService } from '@nestjs/core';
+import { Injectable } from '@nestjs/common';
 
-@Extension('tasks')
+// @Extension('tasks')
+@Injectable()
 export class ExampleExtension {
 	constructor(
 		readonly exampleJob: ExampleJob,
