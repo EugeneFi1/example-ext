@@ -3,11 +3,8 @@ import { DiscoveryService } from '@nestjs/core';
 
 @Job('example-job')
 export class ExampleJob {
-	constructor(
-		readonly exampleJob: ExampleJob,
-		readonly discoveryService: DiscoveryService,
-	) {
-		console.log('ExampleJob:', { exampleJob, discoveryService });
+	constructor(readonly discoveryService: DiscoveryService) {
+		console.log('ExampleJob:', { discoveryService });
 	}
 
 	@SubscribeJob()
