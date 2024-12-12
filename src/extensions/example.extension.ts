@@ -11,18 +11,10 @@ import {
 import { TaskEntity } from '../entities';
 import { DateCalculator } from '../utils';
 import { ExampleJob } from '../jobs';
-import { DiscoveryService } from '@nestjs/core';
-import { Injectable } from '@nestjs/common';
 
-// @Extension('tasks')
-@Injectable()
+@Extension('tasks')
 export class ExampleExtension {
-	constructor(
-		readonly exampleJob: ExampleJob,
-		readonly discoveryService: DiscoveryService,
-	) {
-		console.log('ExampleExtension:', { exampleJob, discoveryService });
-	}
+	constructor(readonly exampleJob: ExampleJob) {}
 
 	@BeforeUpdate()
 	async beforeUpdate(
