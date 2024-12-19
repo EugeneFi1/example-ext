@@ -18,8 +18,8 @@ importers:
         specifier: ^1.13.2
         version: 1.13.4
       '@suppa/sdk':
-        specifier: ^1.9.0
-        version: 1.9.0(rxjs@7.8.1)
+        specifier: ^1.11.0
+        version: 1.11.0(rxjs@7.8.1)
       esbuild:
         specifier: ^0.24.0
         version: 0.24.0
@@ -278,8 +278,8 @@ packages:
     resolution: {integrity: sha1-tkHuBObL1PyTbk7aegQqcyAmBPs=, tarball: https://git.modern-expo.com/api/v4/projects/106/packages/npm/@suppa/proto-definitions/-/@suppa/proto-definitions-1.6.0.tgz}
     engines: {node: '>=20', pnpm: '>=9'}
 
-  '@suppa/sdk@1.9.0':
-    resolution: {integrity: sha1-xIywCAfhxIU5di0sK/JZxDwVgJA=, tarball: https://git.modern-expo.com/api/v4/projects/114/packages/npm/@suppa/sdk/-/@suppa/sdk-1.9.0.tgz}
+  '@suppa/sdk@1.11.0':
+    resolution: {integrity: sha1-n639SNwm1EuRAYUvBwIXA1+e4Hk=, tarball: https://git.modern-expo.com/api/v4/projects/114/packages/npm/@suppa/sdk/-/@suppa/sdk-1.11.0.tgz}
     engines: {node: '>=20', pnpm: '>=9'}
 
   '@types/moment-business-time@1.1.4':
@@ -760,7 +760,7 @@ snapshots:
       rxjs: 7.8.1
       typescript: 5.7.2
 
-  '@suppa/sdk@1.9.0(rxjs@7.8.1)':
+  '@suppa/sdk@1.11.0(rxjs@7.8.1)':
     dependencies:
       '@grpc/grpc-js': 1.12.4
       '@nestjs/common': 10.4.15(reflect-metadata@0.2.2)(rxjs@7.8.1)
